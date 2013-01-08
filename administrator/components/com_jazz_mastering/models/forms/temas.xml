@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_JAZZ_MASTERING_FORM_LBL_TEMAS_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="titulo" type="text"
+                
+            label="COM_JAZZ_MASTERING_FORM_LBL_TEMAS_TITULO"
+            description="COM_JAZZ_MASTERING_FORM_DESC_TEMAS_TITULO" 
+                
+                
+                 required="true" 
+            filter="raw"
+            size="40" /> 
+
+       <field name="compositor" type="text" size="40" class="inputbox"
+        
+            label="COM_JAZZ_MASTERING_FORM_LBL_TEMAS_COMPOSITOR"
+            description="COM_JAZZ_MASTERING_FORM_DESC_TEMAS_COMPOSITOR" 
+        
+        
+        
+        filter="safehtml" /> 
+
+       <field name="tempo" type="sql" class="inputbox"
+        
+            label="COM_JAZZ_MASTERING_FORM_LBL_TEMAS_TEMPO"
+            description="COM_JAZZ_MASTERING_FORM_DESC_TEMAS_TEMPO" 
+        
+        
+         required="true" 
+        query="SELECT 0 AS `id`, '- Please select -' AS `value_tempo` UNION SELECT `id`, `value_tempo` FROM `#__jazz_mastering_tempo`" key_field="id" value_field="value_tempo"
+         /> 
+
+       <field name="filter_tempo" type="sql" class="inputbox"
+            onchange="this.form.submit();"
+            query="SELECT 0 AS `id`, '- Please select tempo -' AS `value_tempo` UNION SELECT `id`, `value_tempo` FROM `#__jazz_mastering_tempo`" key_field="id" value_field="value_tempo"
+             /> 
+
+       <field name="estilo" type="sql" class="inputbox"
+        
+            label="COM_JAZZ_MASTERING_FORM_LBL_TEMAS_ESTILO"
+            description="COM_JAZZ_MASTERING_FORM_DESC_TEMAS_ESTILO" 
+        
+        
+         required="true" 
+        query="SELECT 0 AS `id`, '- Please select -' AS `value_estilo` UNION SELECT `id`, `value_estilo` FROM `#__jazz_mastering_estilo`" key_field="id" value_field="value_estilo"
+         /> 
+
+       <field name="filter_estilo" type="sql" class="inputbox"
+            onchange="this.form.submit();"
+            query="SELECT 0 AS `id`, '- Please select estilo -' AS `value_estilo` UNION SELECT `id`, `value_estilo` FROM `#__jazz_mastering_estilo`" key_field="id" value_field="value_estilo"
+             /> 
+
+       <field name="tonalidad" type="sql" class="inputbox"
+        
+            label="COM_JAZZ_MASTERING_FORM_LBL_TEMAS_TONALIDAD"
+            description="COM_JAZZ_MASTERING_FORM_DESC_TEMAS_TONALIDAD" 
+        
+        
+         required="true" 
+        query="SELECT 0 AS `id`, '- Please select -' AS `value_tonalidad` UNION SELECT `id`, `value_tonalidad` FROM `#__jazz_mastering_value_tonalidad`" key_field="id" value_field="value_tonalidad"
+         /> 
+
+       <field name="filter_tonalidad" type="sql" class="inputbox"
+            onchange="this.form.submit();"
+            query="SELECT 0 AS `id`, '- Please select tonalidad -' AS `value_tonalidad` UNION SELECT `id`, `value_tonalidad` FROM `#__jazz_mastering_value_tonalidad`" key_field="id" value_field="value_tonalidad"
+             /> 
+
+       <field name="modo" type="sql" class="inputbox"
+        
+            label="COM_JAZZ_MASTERING_FORM_LBL_TEMAS_MODO"
+            description="COM_JAZZ_MASTERING_FORM_DESC_TEMAS_MODO" 
+        
+        
+         required="true" 
+        query="SELECT 0 AS `id`, '- Please select -' AS `modo` UNION SELECT `id`, `modo` FROM `#__jazz_mastering_modo`" key_field="id" value_field="modo"
+         /> 
+
+       <field name="chords" type="text"
+                
+            label="COM_JAZZ_MASTERING_FORM_LBL_TEMAS_CHORDS"
+            description="COM_JAZZ_MASTERING_FORM_DESC_TEMAS_CHORDS" 
+                
+                
+                
+            filter="string" /> 
+
+       <field name="compases" type="text" size="40" class="inputbox"
+        
+            label="COM_JAZZ_MASTERING_FORM_LBL_TEMAS_COMPASES"
+            description="COM_JAZZ_MASTERING_FORM_DESC_TEMAS_COMPASES" 
+        
+        
+         required="true" 
+        filter="safehtml" /> 
+
+       <field name="user" type="createdby" default="" 
+            label="COM_JAZZ_MASTERING_FORM_LBL_TEMAS_USER"
+            description="COM_JAZZ_MASTERING_FORM_DESC_TEMAS_USER"  /> 
+
+ 
+		<field name="filter_user" type="user" onchange="this.form.submit();" /> 
+
+       <field name="fecha_de_creacion" type="timecreated" default="" 
+            label="COM_JAZZ_MASTERING_FORM_LBL_TEMAS_FECHA_DE_CREACION"
+            description="COM_JAZZ_MASTERING_FORM_DESC_TEMAS_FECHA_DE_CREACION"  /> 
+
+       <field name="created_by" type="createdby" default="" 
+            label="COM_JAZZ_MASTERING_FORM_LBL_TEMAS_CREATED_BY"
+            description="COM_JAZZ_MASTERING_FORM_DESC_TEMAS_CREATED_BY"  />
+
+	</fieldset>
+
+</form>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+    <name>com_jazz_mastering</name>
+    <creationDate>2013-01-07</creationDate>
+    <copyright>Copyright (C) 2012. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Artur Pañach Bargalló</author>
+    <authorEmail>arturictus@gmail.com</authorEmail>
+    <authorUrl>http://</authorUrl>
+    <version>0.0.6</version>
+    <description></description>
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>jazz_mastering.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+    </files>
+    <languages folder="site">
+        <language tag="en-GB">language/en-GB.com_jazz_mastering.ini
+        </language>
+    </languages>
+    <administration>
+        <menu img="components/com_jazz_mastering/assets/images/s_com_jazz_mastering.png" >COM_JAZZ_MASTERING</menu>
+        <submenu>
+            
+			<menu link="option=com_jazz_mastering&amp;view=temass" view="temass" img="components/com_jazz_mastering/assets/images/s_temass.png" alt="Jazz_mastering/Temass">COM_JAZZ_MASTERING_TITLE_TEMASS</menu>
+
+			<menu link="option=com_jazz_mastering&amp;view=licks" view="licks" img="components/com_jazz_mastering/assets/images/s_licks.png" alt="Jazz_mastering/Licks">COM_JAZZ_MASTERING_TITLE_LICKS</menu>
+
+			<menu link="option=com_jazz_mastering&amp;view=compinglicks" view="compinglicks" img="components/com_jazz_mastering/assets/images/s_compinglicks.png" alt="Jazz_mastering/Compinglicks">COM_JAZZ_MASTERING_TITLE_COMPINGLICKS</menu>
+
+			<menu link="option=com_jazz_mastering&amp;view=modos" view="modos" img="components/com_jazz_mastering/assets/images/s_modos.png" alt="Jazz_mastering/Modos">COM_JAZZ_MASTERING_TITLE_MODOS</menu>
+
+			<menu link="option=com_jazz_mastering&amp;view=cadencias" view="cadencias" img="components/com_jazz_mastering/assets/images/s_cadencias.png" alt="Jazz_mastering/Cadencias">COM_JAZZ_MASTERING_TITLE_CADENCIAS</menu>
+
+			<menu link="option=com_jazz_mastering&amp;view=tempos" view="tempos" img="components/com_jazz_mastering/assets/images/s_tempos.png" alt="Jazz_mastering/Tempos">COM_JAZZ_MASTERING_TITLE_TEMPOS</menu>
+
+			<menu link="option=com_jazz_mastering&amp;view=estilos" view="estilos" img="components/com_jazz_mastering/assets/images/s_estilos.png" alt="Jazz_mastering/Estilos">COM_JAZZ_MASTERING_TITLE_ESTILOS</menu>
+
+			<menu link="option=com_jazz_mastering&amp;view=numdecompaseslicks" view="numdecompaseslicks" img="components/com_jazz_mastering/assets/images/s_numdecompaseslicks.png" alt="Jazz_mastering/Numdecompaseslicks">COM_JAZZ_MASTERING_TITLE_NUMDECOMPASESLICKS</menu>
+
+			<menu link="option=com_jazz_mastering&amp;view=tonalidades" view="tonalidades" img="components/com_jazz_mastering/assets/images/s_tonalidades.png" alt="Jazz_mastering/Tonalidades">COM_JAZZ_MASTERING_TITLE_TONALIDADES</menu>
+
+			<menu link="option=com_jazz_mastering&amp;view=imglicks" view="imglicks" img="components/com_jazz_mastering/assets/images/s_imglicks.png" alt="Jazz_mastering/Imglicks">COM_JAZZ_MASTERING_TITLE_IMGLICKS</menu>
+
+			<menu link="option=com_jazz_mastering&amp;view=lickautors" view="lickautors" img="components/com_jazz_mastering/assets/images/s_lickautors.png" alt="Jazz_mastering/Lickautors">COM_JAZZ_MASTERING_TITLE_LICKAUTORS</menu>
+
+			<menu link="option=com_jazz_mastering&amp;view=licktypes" view="licktypes" img="components/com_jazz_mastering/assets/images/s_licktypes.png" alt="Jazz_mastering/Licktypes">COM_JAZZ_MASTERING_TITLE_LICKTYPES</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>jazz_mastering.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="administrator">
+            <language tag="en-GB">language/en-GB.com_jazz_mastering.ini
+            </language>
+            <language tag="en-GB">language/en-GB.com_jazz_mastering.sys.ini
+            </language>
+        </languages>
+    </administration>
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.notwebdesign.com/joomla-component-creator/ -->

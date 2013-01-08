@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_JAZZ_MASTERING_FORM_LBL_LICK_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+	  
+	  <field name="img_lick" type="media" directory="licks" default="" 
+	    label="COM_JAZZ_MASTERING_FORM_LBL_IMG_LICK"
+	    description="COM_JAZZ_MASTERING_FORM_DESC_IMG_LICK" 
+	    accept="image/*"
+	    required="true" /> 
+	  
+       <field name="user" type="createdby" default="" 
+            label="COM_JAZZ_MASTERING_FORM_LBL_LICK_USER"
+            description="COM_JAZZ_MASTERING_FORM_DESC_LICK_USER"  /> 
+
+       <field name="time_created" type="timecreated" default="" 
+            label="COM_JAZZ_MASTERING_FORM_LBL_LICK_TIME_CREATED"
+            description="COM_JAZZ_MASTERING_FORM_DESC_LICK_TIME_CREATED"  /> 
+
+       <field name="cadencia" type="sql" class="inputbox"
+        
+            label="COM_JAZZ_MASTERING_FORM_LBL_LICK_CADENCIA"
+            description="COM_JAZZ_MASTERING_FORM_DESC_LICK_CADENCIA" 
+        
+        
+         required="true" 
+        query="SELECT 0 AS `id`, '- Please select -' AS `cadencia` UNION SELECT `id`, `cadencia` FROM `#__jazz_mastering_cadencia`" key_field="id" value_field="cadencia"
+         /> 
+
+       <field name="filter_cadencia" type="sql" class="inputbox"
+            onchange="this.form.submit();"
+            query="SELECT 0 AS `id`, '- Please select cadencia -' AS `cadencia` UNION SELECT `id`, `cadencia` FROM `#__jazz_mastering_cadencia`" key_field="id" value_field="cadencia"
+             /> 
+
+       <field name="modo" type="sql" class="inputbox"
+        
+            label="COM_JAZZ_MASTERING_FORM_LBL_LICK_MODO"
+            description="COM_JAZZ_MASTERING_FORM_DESC_LICK_MODO" 
+        
+        
+         required="true" 
+        query="SELECT 0 AS `id`, '- Please select -' AS `modo` UNION SELECT `id`, `modo` FROM `#__jazz_mastering_modo`" key_field="id" value_field="modo"
+         /> 
+
+       <field name="filter_modo" type="sql" class="inputbox"
+            onchange="this.form.submit();"
+            query="SELECT 0 AS `id`, '- Please select modo -' AS `modo` UNION SELECT `id`, `modo` FROM `#__jazz_mastering_modo`" key_field="id" value_field="modo"
+             /> 
+
+       <field name="num_de_compases" type="sql" class="inputbox"
+        
+            label="COM_JAZZ_MASTERING_FORM_LBL_LICK_NUM_DE_COMPASES"
+            description="COM_JAZZ_MASTERING_FORM_DESC_LICK_NUM_DE_COMPASES" 
+        
+        
+         required="true" 
+        query="SELECT 0 AS `id`, '- Please select -' AS `num_de_compases` UNION SELECT `id`, `num_de_compases` FROM `#__jazz_mastering_value_num_de_compases_lick`" key_field="id" value_field="num_de_compases"
+         /> 
+
+       <field name="filter_num_de_compases" type="sql" class="inputbox"
+            onchange="this.form.submit();"
+            query="SELECT 0 AS `id`, '- Please select num_de_compases -' AS `num_de_compases` UNION SELECT `id`, `num_de_compases` FROM `#__jazz_mastering_value_num_de_compases_lick`" key_field="id" value_field="num_de_compases"
+             /> 
+
+       <field name="image_id" type="sql" class="inputbox"
+        
+            label="COM_JAZZ_MASTERING_FORM_LBL_LICK_IMAGE_ID"
+            description="COM_JAZZ_MASTERING_FORM_DESC_LICK_IMAGE_ID" 
+        
+        
+         required="true" 
+        query="SELECT 0 AS `id`, '- Please select -' AS `img_name` UNION SELECT `id`, `img_name` FROM `#__jazz_mastering_img_lick`" key_field="id" value_field="img_name"
+         /> 
+
+       <field name="autor" type="sql" class="inputbox"
+        
+            label="COM_JAZZ_MASTERING_FORM_LBL_LICK_AUTOR"
+            description="COM_JAZZ_MASTERING_FORM_DESC_LICK_AUTOR" 
+        
+        
+        
+        query="SELECT 0 AS `id`, '- Please select -' AS `autorname` UNION SELECT `id`, `autorname` FROM `#__jazz_mastering_lick_autor`" key_field="id" value_field="autorname"
+         />
+
+	</fieldset>
+
+</form>

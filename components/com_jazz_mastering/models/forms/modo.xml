@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="value_modo_id" type="text" size="40" class="inputbox"
+        
+            label="COM_JAZZ_MASTERING_FORM_LBL_MODO_VALUE_MODO_ID"
+            description="COM_JAZZ_MASTERING_FORM_DESC_MODO_VALUE_MODO_ID" 
+        
+        
+        
+        filter="safehtml" /> 
+
+       <field name="values_modo" type="text"
+                
+            label="COM_JAZZ_MASTERING_FORM_LBL_MODO_VALUES_MODO"
+            description="COM_JAZZ_MASTERING_FORM_DESC_MODO_VALUES_MODO" 
+                
+                
+                 required="true" 
+            filter="raw" /> 
+
+       <field name="created_by" type="createdby" default="" 
+            label="COM_JAZZ_MASTERING_FORM_LBL_MODO_CREATED_BY"
+            description="COM_JAZZ_MASTERING_FORM_DESC_MODO_CREATED_BY"  />
+
+	</fieldset>
+
+</form>

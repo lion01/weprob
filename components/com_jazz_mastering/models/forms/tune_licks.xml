@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="lick_id" type="text" size="40" class="inputbox"
+        
+            label="COM_JAZZ_MASTERING_FORM_LBL_LICK_LICK_ID"
+            description="COM_JAZZ_MASTERING_FORM_DESC_LICK_LICK_ID" 
+        
+        
+        
+        filter="safehtml" /> 
+
+       <field name="lick_user" type="createdby" default="" 
+            label="COM_JAZZ_MASTERING_FORM_LBL_LICK_LICK_USER"
+            description="COM_JAZZ_MASTERING_FORM_DESC_LICK_LICK_USER"  /> 
+
+       <field name="lick_time_created" type="timecreated" default="" 
+            label="COM_JAZZ_MASTERING_FORM_LBL_LICK_LICK_TIME_CREATED"
+            description="COM_JAZZ_MASTERING_FORM_DESC_LICK_LICK_TIME_CREATED"  /> 
+
+       <field name="lick_cadencia" type="sql" class="inputbox"
+        
+            label="COM_JAZZ_MASTERING_FORM_LBL_LICK_LICK_CADENCIA"
+            description="COM_JAZZ_MASTERING_FORM_DESC_LICK_LICK_CADENCIA" 
+        
+        
+         required="true" 
+        query="SELECT 0 AS `value_cadencia`, '- Please select -' AS `value_cadencia` UNION SELECT `value_cadencia`, `value_cadencia` FROM `#__jazz_mastering_cadencia`" key_field="value_cadencia" value_field="value_cadencia"
+         /> 
+
+       <field name="filter_lick_cadencia" type="sql" class="inputbox"
+            onchange="this.form.submit();"
+            query="SELECT 0 AS `value_cadencia`, '- Please select lick_cadencia -' AS `value_cadencia` UNION SELECT `value_cadencia`, `value_cadencia` FROM `#__jazz_mastering_cadencia`" key_field="value_cadencia" value_field="value_cadencia"
+             /> 
+
+       <field name="lick_modo" type="sql" class="inputbox"
+        
+            label="COM_JAZZ_MASTERING_FORM_LBL_LICK_LICK_MODO"
+            description="COM_JAZZ_MASTERING_FORM_DESC_LICK_LICK_MODO" 
+        
+        
+         required="true" 
+        query="SELECT 0 AS `values_modo`, '- Please select -' AS `values_modo` UNION SELECT `values_modo`, `values_modo` FROM `#__jazz_mastering_modo`" key_field="values_modo" value_field="values_modo"
+         /> 
+
+       <field name="filter_lick_modo" type="sql" class="inputbox"
+            onchange="this.form.submit();"
+            query="SELECT 0 AS `values_modo`, '- Please select lick_modo -' AS `values_modo` UNION SELECT `values_modo`, `values_modo` FROM `#__jazz_mastering_modo`" key_field="values_modo" value_field="values_modo"
+             /> 
+
+       <field name="lick_num_de_compases" type="sql" class="inputbox"
+        
+            label="COM_JAZZ_MASTERING_FORM_LBL_LICK_LICK_NUM_DE_COMPASES"
+            description="COM_JAZZ_MASTERING_FORM_DESC_LICK_LICK_NUM_DE_COMPASES" 
+        
+        
+         required="true" 
+        query="SELECT 0 AS `valuenumdecompaseslick`, '- Please select -' AS `valuenumdecompaseslick` UNION SELECT `valuenumdecompaseslick`, `valuenumdecompaseslick` FROM `#__jazz_mastering_value_num_de_compases_lick`" key_field="valuenumdecompaseslick" value_field="valuenumdecompaseslick"
+         /> 
+
+       <field name="filter_lick_num_de_compases" type="sql" class="inputbox"
+            onchange="this.form.submit();"
+            query="SELECT 0 AS `valuenumdecompaseslick`, '- Please select lick_num_de_compases -' AS `valuenumdecompaseslick` UNION SELECT `valuenumdecompaseslick`, `valuenumdecompaseslick` FROM `#__jazz_mastering_value_num_de_compases_lick`" key_field="valuenumdecompaseslick" value_field="valuenumdecompaseslick"
+             /> 
+
+       <field name="lick_image_name" type="media"
+                
+            label="COM_JAZZ_MASTERING_FORM_LBL_LICK_LICK_IMAGE_NAME"
+            description="COM_JAZZ_MASTERING_FORM_DESC_LICK_LICK_IMAGE_NAME" 
+                
+                
+                 required="true" 
+            filter="raw"
+            directory="images/lick" /> 
+
+       <field name="lick_autor" type="text"
+                
+            label="COM_JAZZ_MASTERING_FORM_LBL_LICK_LICK_AUTOR"
+            description="COM_JAZZ_MASTERING_FORM_DESC_LICK_LICK_AUTOR" 
+                
+                
+                
+            filter="raw" />
+
+	</fieldset>
+
+</form>

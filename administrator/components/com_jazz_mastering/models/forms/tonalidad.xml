@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_JAZZ_MASTERING_FORM_LBL_TONALIDAD_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="value_tonalidad" type="text"
+                
+            label="COM_JAZZ_MASTERING_FORM_LBL_TONALIDAD_VALUE_TONALIDAD"
+            description="COM_JAZZ_MASTERING_FORM_DESC_TONALIDAD_VALUE_TONALIDAD" 
+                
+                
+                 required="true" 
+            filter="raw" /> 
+
+       <field name="value_tonalidad_creado_por" type="createdby" default="" 
+            label="COM_JAZZ_MASTERING_FORM_LBL_TONALIDAD_VALUE_TONALIDAD_CREADO_POR"
+            description="COM_JAZZ_MASTERING_FORM_DESC_TONALIDAD_VALUE_TONALIDAD_CREADO_POR"  /> 
+
+ 
+		<field name="filter_value_tonalidad_creado_por" type="user" onchange="this.form.submit();" />
+
+	</fieldset>
+
+</form>

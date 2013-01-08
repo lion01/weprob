@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS `#__jazz_mastering_tema`;
+DROP TABLE IF EXISTS `#__jazz_mastering_lick`;
+DROP TABLE IF EXISTS `#__jazz_mastering_comping_lick`;
+DROP TABLE IF EXISTS `#__jazz_mastering_modo`;
+DROP TABLE IF EXISTS `#__jazz_mastering_cadencia`;
+DROP TABLE IF EXISTS `#__jazz_mastering_tempo`;
+DROP TABLE IF EXISTS `#__jazz_mastering_estilo`;
+DROP TABLE IF EXISTS `#__jazz_mastering_value_num_de_compases_lick`;
+DROP TABLE IF EXISTS `#__jazz_mastering_value_tonalidad`;
+DROP TABLE IF EXISTS `#__jazz_mastering_img_lick`;
+DROP TABLE IF EXISTS `#__jazz_mastering_lick_autor`;
+DROP TABLE IF EXISTS `#__jazz_mastering_lick_type`;
